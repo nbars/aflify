@@ -8,9 +8,11 @@ sudo password. However, the compilation process will not be done with elevated
 privileges as long as this script itself is not executed with these.
 
 Besides using the command line flags, you might also set the following environment variables:
- - AFLIFY_CFLAGS: To add flags to the compiler calls.
- - AFLIFY_STRIP_CFLAGS: To stript flags from the compiler calls.
+ - `AFLIFY_CFLAGS:` To add flags to the compiler calls.
+ - `AFLIFY_STRIP_CFLAGS:` To stript flags from the compiler calls.
 
 Examples:
+```
 aflify make -j 8
 aflify cmake .. && make -j8
+```
