@@ -1,17 +1,11 @@
 #!/bin/python3
 
-import errno
-import os
-import shutil
-import sys
-import ctypes
-import subprocess
-import unshare
-import tempfile
 import argparse
-import pwd
-import grp
-from ctypes import c_int, c_char_p
+import ctypes
+import os
+import subprocess
+import sys
+from ctypes import c_int
 from ctypes.util import find_library
 
 LIBC_PATH = find_library('c')
