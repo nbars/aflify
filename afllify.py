@@ -159,7 +159,7 @@ def main():
     parser = argparse.ArgumentParser(description=DESCRIPTION, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--gcc-to', dest='gcc', default='afl-clang-fast', help='Target to which gcc calls are redirected to (default afl-clang-fast)')
     parser.add_argument('--clang-to', dest='clang', default='afl-clang-fast', help='Target to which clang calls are redirected to (default afl-clang-fast)')
-    parser.add_argument('command', type=str, help='The application to execute. E.g. make, cmake,...')
+    parser.add_argument('command', type=str, help='The application to execute (e.g., make, cmake, ...)')
     parser.add_argument('args', nargs=argparse.REMAINDER, help='Arguments for the target application')
     args = parser.parse_args()
 
@@ -180,7 +180,7 @@ def main():
     #Disables propagation of mounts to other namespaces
     subprocess.check_call(['mount', '--make-rprivate', '/'])
 
-    #Redirect wrappen programs (e.g. gcc, clang, strip) to this script
+    #Redirect wrappen programs (e.g., gcc, clang, strip) to this script
     setup_redirects()
 
     #Dont execute the target command and subcommands as root.

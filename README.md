@@ -19,7 +19,7 @@ aflify make -j 8
 aflify cmake .. && make -j8
 
 positional arguments:
-  command           The application to execute. E.g. make, cmake,...
+  command           The application to execute (e.g., make, cmake,...)
   args              Arguments for the target application
 
 optional arguments:
