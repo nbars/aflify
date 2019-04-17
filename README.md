@@ -18,11 +18,11 @@ Examples:
 aflify make -j 8
 aflify cmake .. && make -j8
 
-positional arguments:
+Positional arguments:
   command           The application to execute (e.g., make, cmake,...)
   args              Arguments for the target application
 
-optional arguments:
+Optional arguments:
   -h, --help        show this help message and exit
   --gcc-to GCC      Target to which gcc calls are redirected to (default afl-
                     clang-fast)
